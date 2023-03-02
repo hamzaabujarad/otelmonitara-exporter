@@ -52,7 +52,7 @@ import (
 
 	"github.com/gin-gonic/gin"
 	//monitara exporter
-	monitaraexporter "github.com/hamzaabujarad/oltp-monitaraexporter"
+	monitaraexporter "github.com/hamzaabujarad/otelmonitara-exporter"
 	"go.opentelemetry.io/contrib/instrumentation/github.com/gin-gonic/gin/otelgin"
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/propagation"
