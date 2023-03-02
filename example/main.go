@@ -1,52 +1,9 @@
-<div align="center">
-  <h1>otelmonitara-exporter</h1>
+package main
 
-<br>
+/******************************************************************************/
+/*             Gin framework with opentelemetry monitara exporter             */
+/******************************************************************************/
 
-`otelmonitara-exporter` is a small, dependency-free library for exports opentelemetry logs to monitara APM . 
-
-</div>
-
-## Installation
-
-```bash
-$ go get github.com/hamzaabujarad/otelmonitara-exporter
-```
-
-## Usage
-```go
-//Monitara Opentelemetry end points
-	hosts := []string{"YOUR_END_POINT"}
-	//Monitara open telemetry apiKey
-	apiKey := "YOUR_API_KEY"
-	//Max documents size per task
-	maxBatchSize := 100
-	//debug mode on or off
-	verbose := true
-	//How often should new tasks be executed (in ms)
-	interval := 5000
-	//calling the monitara exporter
-	exporter, err := monitaraexporter.New(hosts, apiKey, maxBatchSize, verbose, interval)
-	if err != nil {
-		return nil, err
-	}
-```
-
-## API
-
-#### `exporter, err := monitaraexporter.New(hosts, apiKey, maxBatchSize, verbose, interval)`
-
-| Option         | Default | Description                                    |
-| :------------- | :------ | :--------------------------------------------- |
-| `hosts`        | ``      | Monitara Opentelemetry end points              |
-| `apiKey`       | ``      | Monitara open telemetry apiKey                 |
-| `maxBatchSize` | `200`   | Max documents size per task                    |
-| `interval`     | `2000`  | How often should new tasks be executed (in ms) |
-| `verbose`      | `true`  | Verbose mode                                   |
-
-
-## Example With Gin WebFrameWork
-```go
 import (
 	"net/http"
 
@@ -98,6 +55,3 @@ func main() {
 	})
 	r.Run()
 }
-
-```
-
