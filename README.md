@@ -45,7 +45,7 @@ $ go get github.com/hamzaabujarad/otelmonitara-exporter
 | `verbose`      | `true`  | Verbose mode                                   |
 
 
-## Example With Gin WebFrameWork
+## Example With Gin Web Framework
 ```go
 import (
 	"net/http"
